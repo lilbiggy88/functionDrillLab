@@ -11,9 +11,11 @@
   Call the function.
 */
 
-function helloWorld("Hello, World!"){
-console.log(helloWorld)
+
+function helloWorld(){
+  console.log('Hello World!')
 }
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -21,8 +23,21 @@ console.log(helloWorld)
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
 
+// function jsNinja(){
+//   return 'I am a JavaScript ninja!'
+// };
+const jsNinja = () => 'I am a JavaScropt ninja!'
+const ninjaStr = jsNinja()
+console.log(ninjaStr)
+
+//  function jsNinja() {
+//  return 'I am a JavaScript ninja!'
+//  }
+
+// const ninjaStr = jsNinja()
+// console.log(ninjaStr)
+ 
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,7 +46,17 @@ console.log(helloWorld)
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+function printName(Cameron){
+  console.log('Cameron')
+}
+
+printName('Cameron')
+
+// Garrett's way
+// const printName = (name) => name
+// const myName = 'John'
+// const nameFromFunction = printName(myName)
+// console.log(printName('John'))
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -44,7 +69,16 @@ console.log(helloWorld)
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+
+
+function greeting(name){
+  console.log("Hello, "+ (name) )
+  
+}
+
+greeting('Jake')
+
+
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -58,8 +92,26 @@ console.log(helloWorld)
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+// const compareNums = (num1, num2) => {
+// if (num1 > num2){
+//   return num1
+// } else {
+//   return num2
+// }
+// }
 
+// compareNums(5, 9)
+// My way
+
+
+// const compareNums = (num1, num2) => num2> num1 ? num2 : num1
+const compareNums = (num1, num2) => {
+  if(num2 > num){
+    return num2
+  }else {
+    return num1
+  }
+}
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -70,6 +122,14 @@ console.log(helloWorld)
 */
 
 //CODE HERE
+function add(num, num2){
+  num = Number(num)
+  num2 = parseInt(num2)
+
+  return num + num2
+}
+
+// const add = (num, num2) => +num + +num2
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -83,9 +143,9 @@ const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
-// console.log('declaration')
-// console.log('expression')
+console.log('arrow')
+console.log('declaration')
+console.log('expression')
 
 
 
@@ -255,10 +315,21 @@ let sampleString = "Hi, my name is Kylo."
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending 
+  order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal
+   to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+const checkAscendingOrder = (arr) => {
+  for(let i = 0; i < arr.length - 1; i++){
+    if (arr[i] > arr[i + 1]){
+      return 'false'
+    } 
+      return 'true'
+    }
+  }
+
 
 
 ////////////////// PROBLEM 22 ////////////////////
